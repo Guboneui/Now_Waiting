@@ -3,7 +3,6 @@ import random
 import store
 from home import Home
 
-
 class Guest(Home):
 
     def printguestpage(self):
