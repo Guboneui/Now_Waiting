@@ -61,7 +61,7 @@ class Store(Home):
     def checkNowWaiting(self):
         print("현재 웨이팅 팀 수를 보여드립니다")
         print("Loading")
-        sleep(1.2)
+        sleep(0.6)
         print("현재 웨이팅 팀 수는 %d 입니다" %(len(Home.guestList)))
 
     def calculator(self):
@@ -78,10 +78,6 @@ class Store(Home):
         elif guest_phone not in Home.guestList:
             print("등록되지 않은 번호입니다.")
 
-
-
-
-
     def vipCoupon(self):
         k = int(input("방문 수 상위 몇분한테 쿠폰을 발행하실 껀가요? : "))
         kk = Counter(Home.allList).most_common(k)
@@ -93,8 +89,7 @@ class Store(Home):
         print("오늘은 총 %d명 방문하였습니다." % (len(Home.guestList)))
         if len(Home.guestList) > 0:
             Home.guestList = []
-        else :
-            pass
+        else: pass
 
         Home.guestCoupon = []
         Home.todayguest = []
